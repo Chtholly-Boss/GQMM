@@ -7,6 +7,10 @@ requires-python = ">=3.12"
 dependencies = [
     "nanobind>=2.9.2",
     "numpy>=2.3.3",
+    "openai-harmony>=0.0.4",
+    "safetensors>=0.6.2",
+    "termcolor>=3.1.0",
+    "tiktoken>=0.11.0",
     "torch>=2.8.0",
 ]
 

@@ -1,5 +1,9 @@
 # development environment files
 .cache
+__pycache__
 
 # artifacts
 build/
+
+# model weights
+gpt-oss-20b/
