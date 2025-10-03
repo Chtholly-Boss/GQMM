@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.30)
-project(gqmm LANGUAGES CXX)
-
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CUDA_ARCHITECTURES 80 86 89 90 90a)
+set(CMAKE_CXX_STANDARD 20)
+
+project(gqmm LANGUAGES CXX CUDA)
 
 set(DEV_MODULE Development.Module)
 
@@ -18,4 +20,4 @@ execute_process(
   OUTPUT_STRIP_TRAILING_WHITESPACE OUTPUT_VARIABLE nanobind_ROOT)
 find_package(nanobind CONFIG REQUIRED)
 
-# nanobind_add_module(my_ext my_ext.cpp) # add extension module
+add_subdirectory(csrc)

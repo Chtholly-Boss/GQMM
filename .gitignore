@@ -3,6 +3,7 @@
 __pycache__
 
 # artifacts
+*.so
 build/
 
 # model weights

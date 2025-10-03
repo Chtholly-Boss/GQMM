@@ -5,6 +5,7 @@ description = "GQMM(General Quantized Matrix Multiplication Library)"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "hexdump>=3.3",
     "nanobind>=2.9.2",
     "numpy>=2.3.3",
     "openai-harmony>=0.0.4",
