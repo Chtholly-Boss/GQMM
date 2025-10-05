@@ -57,11 +57,11 @@ def dequant_mxfp4_torch(blocks: Tensor, scales: Tensor) -> Tensor:
 def test_dequant_mxfp4(num_blocks):
     # random mxfp4 simulation
     blocks = torch.randint(
-        UINT8_LOW, UINT8_HIGH + 1, (num_blocks, 16), dtype=torch.uint8, device="cuda"
+        UINT8_LOW, UINT8_HIGH, (num_blocks, 16), dtype=torch.uint8, device="cuda"
     )
     scales = torch.randint(
         UINT8_LOW,
-        (UINT8_HIGH + 1) // 2,
+        UINT8_HIGH,
         (num_blocks,),
         dtype=torch.uint8,
         device="cuda",

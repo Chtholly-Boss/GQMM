@@ -1,1 +1,6 @@
-nanobind_add_module(_C binding.cpp dequant.cu) # add extension module
+set(CUDA_SRCS 
+    dequant.cu
+    gemm.cu
+)
+
+nanobind_add_module(_C binding.cpp ${CUDA_SRCS}) # add extension module
